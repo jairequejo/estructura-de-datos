@@ -1,0 +1,6 @@
+C:\caxha\estructura-de-datos\ListaEnlazada\Clases\bin\Debug\Clases.dll
+C:\caxha\estructura-de-datos\ListaEnlazada\Clases\bin\Debug\Clases.pdb
+C:\caxha\estructura-de-datos\ListaEnlazada\Clases\obj\Debug\Clases.csproj.AssemblyReference.cache
+C:\caxha\estructura-de-datos\ListaEnlazada\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\caxha\estructura-de-datos\ListaEnlazada\Clases\obj\Debug\Clases.dll
+C:\caxha\estructura-de-datos\ListaEnlazada\Clases\obj\Debug\Clases.pdb
