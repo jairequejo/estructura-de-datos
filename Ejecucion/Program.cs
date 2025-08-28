@@ -18,6 +18,11 @@ namespace Ejecucion
 
             lista.Recorrer();
             lista.Buscar(3);
+
+            ListaEnlazadaSimple<string> listaString = new ListaEnlazadaSimple<string>();
+            listaString.Insertar("Hola");
+            listaString.Insertar("Mundo");
+            listaString.Recorrer();
         }
     }
 }

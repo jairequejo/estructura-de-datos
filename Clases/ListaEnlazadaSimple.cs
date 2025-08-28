@@ -11,39 +11,39 @@ namespace Clases
     /// Para definir el tipo de dato que va a almacenar la lista al instanciarla
     public class ListaEnlazadaSimple<T>
     {
-        public Nodo<T> Primero { get; set; }
+        public Nodo<T> PrimerNodo { get; set; }
 
         public void Insertar(T dato)
         {
-           Nodo<T> nuevo = new Nodo<T>(dato);
-              if (Primero == null)
+           Nodo<T> nuevoNodo = new Nodo<T>(dato);
+              if (PrimerNodo == null)
               {
-                Primero = nuevo;
+                PrimerNodo = nuevoNodo;
               }
               else
               {
-                Nodo<T> temporal = Primero;
-                while (temporal.Enlace != null)
+                Nodo<T> nodoTemporal = PrimerNodo;
+                while (nodoTemporal.SiguienteNodo != null)
                 {
-                     temporal = temporal.Enlace;
+                     nodoTemporal = nodoTemporal.SiguienteNodo;
                 }
-                temporal.Enlace = nuevo;
+                nodoTemporal.SiguienteNodo = nuevoNodo;
             }
         }
         public void Recorrer()
         {
-            if (Primero == null)
+            if (PrimerNodo == null)
             {
                 Console.WriteLine("La lista está vacía.");
                 return;
             }
             else
             {
-                Nodo<T> temporal = Primero;
-                while (temporal != null)
+                Nodo<T> nodoTemporal = PrimerNodo;
+                while (nodoTemporal != null)
                 {
-                    Console.Write($"{temporal.Dato} ->");
-                    temporal = temporal.Enlace;
+                    Console.Write($"{nodoTemporal.Dato} ->");
+                    nodoTemporal = nodoTemporal.SiguienteNodo;
                 }
             }
         }
@@ -51,46 +51,74 @@ namespace Clases
         public void Buscar(T dato)
         {
             Console.WriteLine();
-            if (Primero == null)
+            if (PrimerNodo == null)
             {
                 Console.WriteLine("La lista está vacía.");
             }
             else
             {
-                Nodo<T> temporal = Primero;
-                while (temporal != null)
+                Nodo<T> nodoTemporal = PrimerNodo;
+                while (nodoTemporal != null)
                 {
-                    if (Convert.ToString(temporal.Dato) == Convert.ToString(dato))
+                    if (Convert.ToString(nodoTemporal.Dato) == Convert.ToString(dato))
                     {
                         Console.WriteLine($"El dato {dato} fue encontrado en la lista.");
                         break;
                     }
-                    temporal = temporal.Enlace;
+                    nodoTemporal = nodoTemporal.SiguienteNodo;
                 }
             }
         }
         public void Eliminar(T dato)
         {
-            Nodo<T> temporal = Primero;
-            Nodo<T> anterior = null;
+            Nodo<T> nodoTemporal = PrimerNodo;
+            Nodo<T> nodoAnterior = null;
 
-            while(temporal != null)
+            while(nodoTemporal != null)
             {
-                if (temporal.Dato.Equals(dato))
+                if (nodoTemporal.Dato.Equals(dato))
                 {
-                    if(anterior == null)
+                    if(nodoAnterior == null)
                     {
-                        Primero = temporal.Enlace;
+                        PrimerNodo = nodoTemporal.SiguienteNodo;
                     }
                     else
                     {
-                        anterior.Enlace = temporal.Enlace;
+                        nodoAnterior.SiguienteNodo = nodoTemporal.SiguienteNodo;
                     }
                     break;
                 }
+                nodoAnterior = nodoTemporal;
+                nodoTemporal = nodoTemporal.SiguienteNodo;
             }
-            anterior = temporal;
-            temporal = temporal.Enlace;
         }
+        public void OrdenarBubleSort()
+        {
+            if (PrimerNodo == null)
+            {
+                Console.WriteLine("La lista está vacía.");
+                return;
+            }
+            bool swapped;
+            do
+            {
+                swapped = false;
+                Nodo<T> current = PrimerNodo;
+                while (current != null && current.SiguienteNodo != null)
+                {
+                    // Asumiendo que T implementa IComparable para poder comparar los datos
+                    if (Comparer<T>.Default.Compare(current.Dato, current.SiguienteNodo.Dato) > 0)
+                    {
+                        // Intercambiar los datos
+                        T temp = current.Dato;
+                        current.Dato = current.SiguienteNodo.Dato;
+                        current.SiguienteNodo.Dato = temp;
+                        swapped = true;
+                    }
+                    current = current.SiguienteNodo;
+                }
+            } while (swapped);
+        }
+
     }
 }

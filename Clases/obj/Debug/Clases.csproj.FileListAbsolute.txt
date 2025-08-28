@@ -4,3 +4,9 @@ C:\caxha\estructura-de-datos\ListaEnlazada\Clases\obj\Debug\Clases.csproj.Assemb
 C:\caxha\estructura-de-datos\ListaEnlazada\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
 C:\caxha\estructura-de-datos\ListaEnlazada\Clases\obj\Debug\Clases.dll
 C:\caxha\estructura-de-datos\ListaEnlazada\Clases\obj\Debug\Clases.pdb
+C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\bin\Debug\Clases.dll
+C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\bin\Debug\Clases.pdb
+C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\obj\Debug\Clases.csproj.AssemblyReference.cache
+C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\obj\Debug\Clases.dll
+C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\obj\Debug\Clases.pdb

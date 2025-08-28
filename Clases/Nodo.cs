@@ -12,12 +12,12 @@ namespace Clases
     public class Nodo<T>
     {
         public  T Dato { get; set; }
-        public Nodo<T> Enlace { get; set; }
+        public Nodo<T> SiguienteNodo { get; set; }
 
         public Nodo(T dato)
         {
             Dato = dato;
-            Enlace = null;
+            SiguienteNodo = null;
         }
 
     }
