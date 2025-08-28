@@ -10,3 +10,9 @@ C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\obj\Debug\Clases.
 C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
 C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\obj\Debug\Clases.dll
 C:\Users\jaire\Downloads\gitclone\lista-enlazada-simple\Clases\obj\Debug\Clases.pdb
+C:\caxha\lista-enlazada-simple\Clases\bin\Debug\Clases.dll
+C:\caxha\lista-enlazada-simple\Clases\bin\Debug\Clases.pdb
+C:\caxha\lista-enlazada-simple\Clases\obj\Debug\Clases.csproj.AssemblyReference.cache
+C:\caxha\lista-enlazada-simple\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\caxha\lista-enlazada-simple\Clases\obj\Debug\Clases.dll
+C:\caxha\lista-enlazada-simple\Clases\obj\Debug\Clases.pdb

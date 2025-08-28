@@ -46,6 +46,7 @@ namespace Clases
                     nodoTemporal = nodoTemporal.SiguienteNodo;
                 }
             }
+            Console.WriteLine(" ");
         }
         // Reemplaza la línea problemática en el método Buscar por la comparación correcta usando .Equals
         public void Buscar(T dato)
@@ -92,33 +93,62 @@ namespace Clases
                 nodoTemporal = nodoTemporal.SiguienteNodo;
             }
         }
-        public void OrdenarBubleSort()
+
+        //public void Ordenar()
+        //{
+        //    Nodo<T> nodoTemporal = PrimerNodo;
+        //    while (nodoTemporal != null)
+        //    {
+        //        Nodo<T> nodoTemporal2 = PrimerNodo;
+        //        while (nodoTemporal2 != null)
+        //        {
+        //            for(int i = 0;i < Convert.ToString(nodoTemporal.Dato).Length && i < Convert.ToString(nodoTemporal2.Dato).Length; i++)
+        //            {
+        //                if(Convert.ToString(nodoTemporal.Dato)[i] < Convert.ToString(nodoTemporal2.Dato)[i])
+        //                {
+        //                    T auxiliar = nodoTemporal.Dato;
+        //                    nodoTemporal.Dato = nodoTemporal2.Dato;
+        //                    nodoTemporal2.Dato = auxiliar;
+        //                    break;
+        //                }
+        //                else if (Convert.ToString(nodoTemporal.Dato)[i] > Convert.ToString(nodoTemporal2.Dato)[i])
+        //                {
+        //                    break;
+        //                }
+        //            }
+        //        }
+        //        nodoTemporal = nodoTemporal.SiguienteNodo;
+        //    }
+        //    Recorrer();
+        //}
+
+        //Ordenar una lista enlazada simple de enteros y cadenas
+        public void Ordenar()
         {
-            if (PrimerNodo == null)
-            {
-                Console.WriteLine("La lista está vacía.");
-                return;
-            }
-            bool swapped;
+            bool intercambiado;
             do
             {
-                swapped = false;
-                Nodo<T> current = PrimerNodo;
-                while (current != null && current.SiguienteNodo != null)
+                intercambiado = false;
+                Nodo<T> nodoTemporal = PrimerNodo;
+                while (nodoTemporal.SiguienteNodo != null)
                 {
-                    // Asumiendo que T implementa IComparable para poder comparar los datos
-                    if (Comparer<T>.Default.Compare(current.Dato, current.SiguienteNodo.Dato) > 0)
+                    int comparacion = Comparer<T>.Default.Compare(nodoTemporal.Dato, nodoTemporal.SiguienteNodo.Dato);
+                    Console.WriteLine(comparacion);
+                    // Si es mayor: comparacion es 1
+                    // Si es igual: comparacion es 0
+                    // Si es menor: comparacion es -1
+                    if (comparacion > 0)
                     {
                         // Intercambiar los datos
-                        T temp = current.Dato;
-                        current.Dato = current.SiguienteNodo.Dato;
-                        current.SiguienteNodo.Dato = temp;
-                        swapped = true;
+                        T auxiliar = nodoTemporal.Dato;
+                        nodoTemporal.Dato = nodoTemporal.SiguienteNodo.Dato;
+                        nodoTemporal.SiguienteNodo.Dato = auxiliar;
+                        intercambiado = true;
                     }
-                    current = current.SiguienteNodo;
+                    nodoTemporal = nodoTemporal.SiguienteNodo;
                 }
-            } while (swapped);
+            } while (intercambiado);
+            Recorrer();
         }
-
     }
 }

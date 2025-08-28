@@ -12,17 +12,20 @@ namespace Ejecucion
         static void Main(string[] args)
         {
             ListaEnlazadaSimple<int> lista = new ListaEnlazadaSimple<int>();
-            lista.Insertar(10);
-            lista.Insertar(20);
+            lista.Insertar(5);
+            lista.Insertar(11);
             lista.Insertar(3);
 
             lista.Recorrer();
-            lista.Buscar(3);
+            lista.Ordenar();
 
             ListaEnlazadaSimple<string> listaString = new ListaEnlazadaSimple<string>();
-            listaString.Insertar("Hola");
-            listaString.Insertar("Mundo");
+            listaString.Insertar("Pepe");
+            listaString.Insertar("Juan");
+            listaString.Insertar("Alonso");
+
             listaString.Recorrer();
+            listaString.Ordenar();
         }
     }
 }
