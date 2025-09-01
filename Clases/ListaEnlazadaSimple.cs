@@ -23,11 +23,11 @@ namespace Clases
               else
               {
                 Nodo<T> nodoTemporal = PrimerNodo;
-                while (nodoTemporal.SiguienteNodo != null)
+                while (nodoTemporal.siguiente != null)
                 {
-                     nodoTemporal = nodoTemporal.SiguienteNodo;
+                     nodoTemporal = nodoTemporal.siguiente;
                 }
-                nodoTemporal.SiguienteNodo = nuevoNodo;
+                nodoTemporal.siguiente = nuevoNodo;
             }
         }
         public void Recorrer()
@@ -42,8 +42,8 @@ namespace Clases
                 Nodo<T> nodoTemporal = PrimerNodo;
                 while (nodoTemporal != null)
                 {
-                    Console.Write($"{nodoTemporal.Dato} ->");
-                    nodoTemporal = nodoTemporal.SiguienteNodo;
+                    Console.Write($"{nodoTemporal.dato} ->");
+                    nodoTemporal = nodoTemporal.siguiente;
                 }
             }
             Console.WriteLine(" ");
@@ -61,12 +61,12 @@ namespace Clases
                 Nodo<T> nodoTemporal = PrimerNodo;
                 while (nodoTemporal != null)
                 {
-                    if (Convert.ToString(nodoTemporal.Dato) == Convert.ToString(dato))
+                    if (Convert.ToString(nodoTemporal.dato) == Convert.ToString(dato))
                     {
                         Console.WriteLine($"El dato {dato} fue encontrado en la lista.");
                         break;
                     }
-                    nodoTemporal = nodoTemporal.SiguienteNodo;
+                    nodoTemporal = nodoTemporal.siguiente;
                 }
             }
         }
@@ -77,20 +77,20 @@ namespace Clases
 
             while(nodoTemporal != null)
             {
-                if (nodoTemporal.Dato.Equals(dato))
+                if (nodoTemporal.dato.Equals(dato))
                 {
                     if(nodoAnterior == null)
                     {
-                        PrimerNodo = nodoTemporal.SiguienteNodo;
+                        PrimerNodo = nodoTemporal.siguiente;
                     }
                     else
                     {
-                        nodoAnterior.SiguienteNodo = nodoTemporal.SiguienteNodo;
+                        nodoAnterior.siguiente = nodoTemporal.siguiente;
                     }
                     break;
                 }
                 nodoAnterior = nodoTemporal;
-                nodoTemporal = nodoTemporal.SiguienteNodo;
+                nodoTemporal = nodoTemporal.siguiente;
             }
         }
 
@@ -130,9 +130,9 @@ namespace Clases
             {
                 intercambiado = false;
                 Nodo<T> nodoTemporal = PrimerNodo;
-                while (nodoTemporal.SiguienteNodo != null)
+                while (nodoTemporal.siguiente != null)
                 {
-                    int comparacion = Comparer<T>.Default.Compare(nodoTemporal.Dato, nodoTemporal.SiguienteNodo.Dato);
+                    int comparacion = Comparer<T>.Default.Compare(nodoTemporal.dato, nodoTemporal.siguiente.dato);
                     Console.WriteLine(comparacion);
                     // Si es mayor: comparacion es 1
                     // Si es igual: comparacion es 0
@@ -140,12 +140,12 @@ namespace Clases
                     if (comparacion > 0)
                     {
                         // Intercambiar los datos
-                        T auxiliar = nodoTemporal.Dato;
-                        nodoTemporal.Dato = nodoTemporal.SiguienteNodo.Dato;
-                        nodoTemporal.SiguienteNodo.Dato = auxiliar;
+                        T auxiliar = nodoTemporal.dato;
+                        nodoTemporal.dato = nodoTemporal.siguiente.dato;
+                        nodoTemporal.siguiente.dato = auxiliar;
                         intercambiado = true;
                     }
-                    nodoTemporal = nodoTemporal.SiguienteNodo;
+                    nodoTemporal = nodoTemporal.siguiente;
                 }
             } while (intercambiado);
             Recorrer();

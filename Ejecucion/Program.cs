@@ -11,21 +11,18 @@ namespace Ejecucion
     {
         static void Main(string[] args)
         {
-            ListaEnlazadaSimple<int> lista = new ListaEnlazadaSimple<int>();
+            ListaEnlazadaDoble<int> lista = new ListaEnlazadaDoble<int>();
             lista.Insertar(5);
             lista.Insertar(11);
             lista.Insertar(3);
+            lista.Insertar(22);
+            lista.Insertar(0);
 
-            lista.Recorrer();
-            lista.Ordenar();
 
-            ListaEnlazadaSimple<string> listaString = new ListaEnlazadaSimple<string>();
-            listaString.Insertar("Pepe");
-            listaString.Insertar("Juan");
-            listaString.Insertar("Alonso");
 
-            listaString.Recorrer();
-            listaString.Ordenar();
+            lista.Mostrar_Adelante();
+            Console.WriteLine();
+            lista.Mostrar_Atras();
         }
     }
 }

@@ -11,13 +11,15 @@ namespace Clases
     /// Para definir el tipo de dato que va a almacenar el nodo
     public class Nodo<T>
     {
-        public  T Dato { get; set; }
-        public Nodo<T> SiguienteNodo { get; set; }
+        public  T dato { get; set; }
+        public Nodo<T> siguiente { get; set; }
+        public Nodo<T> anterior { get; set; }
 
         public Nodo(T dato)
         {
-            Dato = dato;
-            SiguienteNodo = null;
+            this.dato = dato;
+            siguiente = null;
+            anterior = null;
         }
 
     }
