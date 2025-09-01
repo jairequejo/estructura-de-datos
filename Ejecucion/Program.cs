@@ -18,9 +18,12 @@ namespace Ejecucion
             lista.Insertar(22);
             lista.Insertar(0);
 
-
-
             lista.Mostrar_Adelante();
+            lista.Eliminar(22);
+
+            lista.Eliminar(5);
+            lista.Eliminar(0);
+
             Console.WriteLine();
             lista.Mostrar_Atras();
         }
