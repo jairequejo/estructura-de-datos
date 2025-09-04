@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Clases;
 using System.Threading.Tasks;
+using Implementacion;
 
 namespace Ejecucion
 {
@@ -11,21 +12,25 @@ namespace Ejecucion
     {
         static void Main(string[] args)
         {
-            ListaEnlazadaDoble<int> lista = new ListaEnlazadaDoble<int>();
-            lista.Insertar(5);
-            lista.Insertar(11);
-            lista.Insertar(3);
-            lista.Insertar(22);
-            lista.Insertar(0);
+            Cancion cancion01 = new Cancion(1, "Duro 2 horas.mp3", "trap");
+            Cancion cancion02 = new Cancion(2, "carnavales mix.mp3", "carnavales");
+            Cancion cancion03 = new Cancion(3, "Todo lo beuno tarda.mp3", "rap");
+            Cancion cancion04 = new Cancion(4, "Puertas", "rock");
 
-            lista.Mostrar_Adelante();
-            lista.Eliminar(22);
+            ListaEnlazadaCircular<Cancion> ListaCanciones = new ListaEnlazadaCircular<Cancion>();
 
-            lista.Eliminar(5);
-            lista.Eliminar(0);
+            ListaCanciones.Insertar(cancion01);
+            ListaCanciones.Insertar(cancion02);
+            ListaCanciones.Insertar(cancion03);
+            ListaCanciones.Insertar(cancion04);
 
-            Console.WriteLine();
-            lista.Mostrar_Atras();
+            ListaCanciones.Mostrar();
+
+            //ListaCanciones.Eliminar(cancion01);
+
+            //ListaCanciones.Mostrar();
+
+
         }
     }
 }

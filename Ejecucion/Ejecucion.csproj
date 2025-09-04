@@ -54,6 +54,10 @@
       <Project>{efebf48a-ecf6-47e1-ae44-57a45a137c0d}</Project>
       <Name>Clases</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Implementacion\Implementacion.csproj">
+      <Project>{cf5ab0a1-b2e3-4a9d-a379-113d12cc7ded}</Project>
+      <Name>Implementacion</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

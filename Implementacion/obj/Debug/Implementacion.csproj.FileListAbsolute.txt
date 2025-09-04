@@ -1,0 +1,6 @@
+C:\caxha\lista-enlazada\Implementacion\bin\Debug\Implementacion.dll
+C:\caxha\lista-enlazada\Implementacion\bin\Debug\Implementacion.pdb
+C:\caxha\lista-enlazada\Implementacion\obj\Debug\Implementacion.csproj.AssemblyReference.cache
+C:\caxha\lista-enlazada\Implementacion\obj\Debug\Implementacion.csproj.CoreCompileInputs.cache
+C:\caxha\lista-enlazada\Implementacion\obj\Debug\Implementacion.dll
+C:\caxha\lista-enlazada\Implementacion\obj\Debug\Implementacion.pdb

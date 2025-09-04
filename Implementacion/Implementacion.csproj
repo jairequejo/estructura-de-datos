@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EFEBF48A-ECF6-47E1-AE44-57A45A137C0D}</ProjectGuid>
+    <ProjectGuid>{CF5AB0A1-B2E3-4A9D-A379-113D12CC7DED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Clases</RootNamespace>
-    <AssemblyName>Clases</AssemblyName>
+    <RootNamespace>Implementacion</RootNamespace>
+    <AssemblyName>Implementacion</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,17 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListaEnlazadaCircular.cs" />
-    <Compile Include="ListaEnlazadaDoble.cs" />
-    <Compile Include="ListaEnlazadaSimple.cs" />
-    <Compile Include="Nodo.cs" />
+    <Compile Include="Cancion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Implementacion\Implementacion.csproj">
-      <Project>{cf5ab0a1-b2e3-4a9d-a379-113d12cc7ded}</Project>
-      <Name>Implementacion</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
