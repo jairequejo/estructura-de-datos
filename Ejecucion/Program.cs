@@ -12,24 +12,18 @@ namespace Ejecucion
     {
         static void Main(string[] args)
         {
-            Cancion cancion01 = new Cancion(1, "Duro 2 horas.mp3", "trap");
-            Cancion cancion02 = new Cancion(2, "carnavales mix.mp3", "carnavales");
-            Cancion cancion03 = new Cancion(3, "Todo lo beuno tarda.mp3", "rap");
-            Cancion cancion04 = new Cancion(4, "Puertas", "rock");
+            Cancion c1 = new Cancion(1, "Dopamine", "BeatBox", "Wing", "Media/cancionWing.wav");
+            Cancion c2 = new Cancion(1, "Pajaro", "Huayno", "Pingolo Producciones", "Media/cancionPajaro.wav");
+            //ListaDobleCircular<Cancion> listaCanciones = new ListaDobleCircular<Cancion>();
 
-            ListaEnlazadaCircular<Cancion> ListaCanciones = new ListaEnlazadaCircular<Cancion>();
+            //listaCanciones.Insertar(c1);
+            //listaCanciones.Insertar(c2);
+            //listaCanciones.Mostrar_Adelante();
 
-            ListaCanciones.Insertar(cancion01);
-            ListaCanciones.Insertar(cancion02);
-            ListaCanciones.Insertar(cancion03);
-            ListaCanciones.Insertar(cancion04);
-
-            ListaCanciones.Mostrar();
-
-            //ListaCanciones.Eliminar(cancion01);
-
-            //ListaCanciones.Mostrar();
-
+            ListaEnlazadaReproduccion listaCancionesNodos = new ListaEnlazadaReproduccion();
+            listaCancionesNodos.Insertar(c1);
+            listaCancionesNodos.Insertar(c2);
+            listaCancionesNodos.Mostrar_Adelante();
 
         }
     }

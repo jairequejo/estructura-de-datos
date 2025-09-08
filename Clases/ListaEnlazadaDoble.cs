@@ -77,7 +77,6 @@ namespace Clases
                     }
                     nodoTemporal = nodoTemporal.siguiente;
                 }
-
            }
         }
     }

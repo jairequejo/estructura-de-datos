@@ -44,3 +44,16 @@ C:\caxha\lista-enlazada\Ejecucion\bin\Debug\Implementacion.dll
 C:\caxha\lista-enlazada\Ejecucion\bin\Debug\Clases.pdb
 C:\caxha\lista-enlazada\Ejecucion\bin\Debug\Implementacion.pdb
 C:\caxha\lista-enlazada\Ejecucion\obj\Debug\Ejecucion.csproj.Up2Date
+C:\cax\lista-enlazada\Ejecucion\bin\Debug\Ejecucion.exe.config
+C:\cax\lista-enlazada\Ejecucion\bin\Debug\Ejecucion.exe
+C:\cax\lista-enlazada\Ejecucion\bin\Debug\Ejecucion.pdb
+C:\cax\lista-enlazada\Ejecucion\bin\Debug\Clases.dll
+C:\cax\lista-enlazada\Ejecucion\bin\Debug\Implementacion.dll
+C:\cax\lista-enlazada\Ejecucion\bin\Debug\Clases.pdb
+C:\cax\lista-enlazada\Ejecucion\bin\Debug\Implementacion.pdb
+C:\cax\lista-enlazada\Ejecucion\obj\Debug\Ejecucion.csproj.AssemblyReference.cache
+C:\cax\lista-enlazada\Ejecucion\obj\Debug\Ejecucion.exe.config
+C:\cax\lista-enlazada\Ejecucion\obj\Debug\Ejecucion.csproj.CoreCompileInputs.cache
+C:\cax\lista-enlazada\Ejecucion\obj\Debug\Ejecucion.csproj.Up2Date
+C:\cax\lista-enlazada\Ejecucion\obj\Debug\Ejecucion.exe
+C:\cax\lista-enlazada\Ejecucion\obj\Debug\Ejecucion.pdb

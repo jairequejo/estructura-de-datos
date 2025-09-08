@@ -25,3 +25,12 @@ C:\caxha\lista-enlazada\Clases\obj\Debug\Clases.pdb
 C:\caxha\lista-enlazada\Clases\bin\Debug\Implementacion.dll
 C:\caxha\lista-enlazada\Clases\bin\Debug\Implementacion.pdb
 C:\caxha\lista-enlazada\Clases\obj\Debug\Clases.csproj.Up2Date
+C:\cax\lista-enlazada\Clases\bin\Debug\Clases.dll
+C:\cax\lista-enlazada\Clases\bin\Debug\Clases.pdb
+C:\cax\lista-enlazada\Clases\bin\Debug\Implementacion.dll
+C:\cax\lista-enlazada\Clases\bin\Debug\Implementacion.pdb
+C:\cax\lista-enlazada\Clases\obj\Debug\Clases.csproj.AssemblyReference.cache
+C:\cax\lista-enlazada\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\cax\lista-enlazada\Clases\obj\Debug\Clases.csproj.Up2Date
+C:\cax\lista-enlazada\Clases\obj\Debug\Clases.dll
+C:\cax\lista-enlazada\Clases\obj\Debug\Clases.pdb

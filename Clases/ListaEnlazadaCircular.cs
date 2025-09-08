@@ -41,5 +41,45 @@ namespace Clases
                 nodoTemporal = nodoTemporal.siguiente;
             } while (nodoTemporal != nodoPrimero);
         }
+        public void Eliminar(T dato)
+        {
+            if (nodoPrimero == null)
+            {
+                Console.WriteLine("La lista está vacía.");
+                return;
+            }
+            Nodo<T> nodoActual = nodoPrimero;
+            Nodo<T> nodoAnterior = null;
+            do
+            {
+                if (Convert.ToString(nodoActual.dato) == Convert.ToString(dato))
+                {
+                    if (nodoAnterior != null)
+                    {
+                        nodoAnterior.siguiente = nodoActual.siguiente;
+                        if (nodoActual == nodoUltimo) // Si es el último nodo, actualizar nodoUltimo
+                        {
+                            nodoUltimo = nodoAnterior;
+                        }
+                    }
+                    else // Si es el primer nodo
+                    {
+                        if (nodoActual == nodoUltimo) // Si es el único nodo en la lista
+                        {
+                            nodoPrimero = null;
+                            nodoUltimo = null;
+                        }
+                        else
+                        {
+                            nodoPrimero = nodoPrimero.siguiente;
+                            nodoUltimo.siguiente = nodoPrimero; // Mantener la circularidad
+                        }
+                    }
+                    return; // Nodo eliminado, salir del método
+                }
+                nodoAnterior = nodoActual;
+                nodoActual = nodoActual.siguiente;
+            } while (nodoActual != nodoPrimero);
+        }
     }
 }
