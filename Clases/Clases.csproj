@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListaDobleCircular.cs" />
-    <Compile Include="ListaEnlazadaCircular.cs" />
-    <Compile Include="ListaEnlazadaDoble.cs" />
+    <Compile Include="ListaEnlazadaGenerico\ListaEnlazadaCircularDoble.cs" />
+    <Compile Include="ListaEnlazadaGenerico\ListaEnlazadaCircularSimple.cs" />
+    <Compile Include="ListaEnlazadaGenerico\ListaEnlazadaDoble.cs" />
     <Compile Include="ListaEnlazadaReproduccion.cs" />
-    <Compile Include="ListaEnlazadaSimple.cs" />
-    <Compile Include="Nodo.cs" />
+    <Compile Include="ListaEnlazadaGenerico\ListaEnlazadaSimple.cs" />
+    <Compile Include="ListaEnlazadaGenerico\Nodo.cs" />
     <Compile Include="NodoCancion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +55,17 @@
       <Project>{cf5ab0a1-b2e3-4a9d-a379-113d12cc7ded}</Project>
       <Name>Implementacion</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,10 +1,6 @@
 ﻿using Implementacion;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
+using WMPLib; // Agregar referencia a Windows Media Player (COM)
 
 namespace Clases
 {
@@ -12,6 +8,13 @@ namespace Clases
     {
         public NodoCancion nodoPrimero { get; set; }
         public NodoCancion nodoUltimo { get; set; }
+        private WindowsMediaPlayer player; // Reproductor global
+
+        public ListaEnlazadaReproduccion()
+        {
+            player = new WindowsMediaPlayer();
+        }
+
         public void Insertar(Cancion dato)
         {
             NodoCancion nodoNuevo = new NodoCancion(dato);
@@ -19,10 +22,8 @@ namespace Clases
             {
                 nodoPrimero = nodoNuevo;
                 nodoUltimo = nodoNuevo;
-                nodoPrimero.siguiente = nodoUltimo;
-                nodoPrimero.anterior = nodoUltimo;
-                nodoUltimo.siguiente = nodoPrimero;
-                nodoUltimo.anterior = nodoPrimero;
+                nodoPrimero.siguiente = nodoPrimero;
+                nodoPrimero.anterior = nodoPrimero;
             }
             else
             {
@@ -33,80 +34,101 @@ namespace Clases
                 nodoUltimo = nodoNuevo;
             }
         }
-        public void Mostrar_Adelante()
+
+        public void Reproducir()
         {
             if (nodoPrimero == null)
             {
                 Console.WriteLine("La lista está vacía.");
                 return;
             }
-            NodoCancion nodoTemporal = nodoPrimero;
-            do
+
+            NodoCancion actual = nodoPrimero;
+            bool salir = false;
+
+            // Mostrar menú de controles
+            Menu();
+
+            // Reproducir primera canción
+            ReproducirSonido(actual.dato.Enlace);
+            Console.WriteLine($"> Reproduciendo: {actual.dato.Nombre}");
+
+            while (!salir)
             {
-                Console.WriteLine(nodoTemporal.dato);
-                
-                Console.WriteLine("Presiona P para pausar y renudar, S para la siguiente canción, A para la anterior canción, X para Salir.");
-                char op = Console.ReadKey().KeyChar;
-                switch (op)
+                if (Console.KeyAvailable) // ✅ Detecta si hay tecla presionada sin bloquear
                 {
-                    case 'P':
-                    case 'p':
-                        Console.WriteLine("\nPausado. Presiona cualquier tecla para continuar...");
-                        Console.ReadKey();
-                        break;
-                    case 'S':
-                    case 's':
-                        // Ir a la siguiente canción
-                        nodoTemporal = nodoTemporal.siguiente;
-                        continue; // Saltar el avance al final del bucle
-                    case 'A':
-                    case 'a':
-                        // Ir a la canción anterior
-                        nodoTemporal = nodoTemporal.anterior;
-                        continue; // Saltar el avance al final del bucle
-                    case 'X':
-                    case 'x':
-                        Console.WriteLine("\nSaliendo de la reproducción.");
-                        return; // Salir del método
-                    default:
-                        Console.WriteLine("\nOpción no válida. Continuando con la reproducción...");
-                        break;
+                    char op = Console.ReadKey(true).KeyChar;
+
+                    switch (char.ToLower(op))
+                    {
+                        case 'p':
+                            if (player.playState == WMPPlayState.wmppsPlaying)
+                            {
+                                player.controls.pause();
+                                Console.WriteLine("== Pausado ==");
+                            }
+                            else if (player.playState == WMPPlayState.wmppsPaused)
+                            {
+                                player.controls.play();
+                                Console.WriteLine(">> Reanudado <<");
+                            }
+                            break;
+
+                        case 's':
+                            Menu();
+                            actual = actual.siguiente;
+                            ReproducirSonido(actual.dato.Enlace);
+                            Console.WriteLine($">> Siguiente: {actual.dato.Nombre}");
+                            break;
+
+                        case 'a':
+                            Menu();
+                            actual = actual.anterior;
+                            ReproducirSonido(actual.dato.Enlace);
+                            Console.WriteLine($"<< Anterior: {actual.dato.Nombre}");
+                            break;
+
+                        case 'x':
+                            Console.WriteLine("> Saliendo del reproductor...");
+                            salir = true;
+                            player.controls.stop();
+                            break;
+
+                        default:
+                            Console.WriteLine("> Opción no válida. Usa [P], [S], [A], [X]");
+                            break;
+                    }
                 }
-                ReproducirSonido(Convert.ToString(nodoTemporal.dato.Enlace));
-                nodoTemporal = nodoTemporal.siguiente;
-            } while (nodoTemporal != nodoPrimero);
+
+                System.Threading.Thread.Sleep(200); // evita que consuma 100% CPU
+            }
         }
+
+        private void Menu()
+        {
+            Console.Clear();
+            Console.WriteLine("\n == Reproductor Interactivo ==");
+            Console.WriteLine(" [P] Pausar/Reanudar");
+            Console.WriteLine(" [S] Siguiente canción");
+            Console.WriteLine(" [A] Canción anterior");
+            Console.WriteLine(" [X] Salir del reproductor\n");
+        }
+
+
         private void ReproducirSonido(string ruta)
         {
             try
             {
-
-                using (SoundPlayer player = new SoundPlayer(ruta))
-                {
-                    player.Load();
-                    player.PlaySync(); // Reproduce el sonido de forma síncrona
-                }
-
+                player.controls.stop();
+                player.URL = ruta; // Asignar ruta de la canción
+                player.controls.play();
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error al reproducir el sonido: " + ex.Message);
             }
         }
-        public void Mostrar_Atras()
-        {
-            if (nodoUltimo == null)
-            {
-                Console.WriteLine("La lista está vacía.");
-                return;
-            }
-            NodoCancion nodoTemporal = nodoUltimo;
-            do
-            {
-                Console.WriteLine(nodoTemporal.dato);
-                nodoTemporal = nodoTemporal.anterior;
-            } while (nodoTemporal != nodoUltimo);
-        }
+
         public void Eliminar(Cancion dato)
         {
             if (nodoPrimero == null)
@@ -114,34 +136,40 @@ namespace Clases
                 Console.WriteLine("La lista está vacía.");
                 return;
             }
-            NodoCancion nodoActual = nodoPrimero;
-            NodoCancion nodoAnterior = nodoUltimo;
+
+            NodoCancion actual = nodoPrimero;
+
             do
             {
-                if (Convert.ToString(nodoActual.dato) == Convert.ToString(dato))
+                if (actual.dato.Equals(dato))
                 {
-                    if (nodoActual == nodoPrimero) // Si es el primer nodo
+                    if (actual == nodoPrimero && actual == nodoUltimo)
+                    {
+                        nodoPrimero = null;
+                        nodoUltimo = null;
+                    }
+                    else if (actual == nodoPrimero)
                     {
                         nodoPrimero = nodoPrimero.siguiente;
                         nodoPrimero.anterior = nodoUltimo;
                         nodoUltimo.siguiente = nodoPrimero;
                     }
-                    else if (nodoActual == nodoUltimo) // Si es el último nodo
+                    else if (actual == nodoUltimo)
                     {
                         nodoUltimo = nodoUltimo.anterior;
                         nodoUltimo.siguiente = nodoPrimero;
                         nodoPrimero.anterior = nodoUltimo;
                     }
-                    else // Nodo en medio
+                    else
                     {
-                        nodoAnterior.siguiente = nodoActual.siguiente;
-                        nodoActual.siguiente.anterior = nodoAnterior;
+                        actual.anterior.siguiente = actual.siguiente;
+                        actual.siguiente.anterior = actual.anterior;
                     }
-                    return; // Salir después de eliminar
+                    return;
                 }
-                nodoAnterior = nodoActual;
-                nodoActual = nodoActual.siguiente;
-            } while (nodoActual != nodoPrimero);
+                actual = actual.siguiente;
+            } while (actual != nodoPrimero);
+
             Console.WriteLine("Elemento no encontrado.");
         }
     }

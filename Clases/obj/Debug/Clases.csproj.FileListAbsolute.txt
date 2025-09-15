@@ -34,3 +34,14 @@ C:\cax\lista-enlazada\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
 C:\cax\lista-enlazada\Clases\obj\Debug\Clases.csproj.Up2Date
 C:\cax\lista-enlazada\Clases\obj\Debug\Clases.dll
 C:\cax\lista-enlazada\Clases\obj\Debug\Clases.pdb
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\bin\Debug\Clases.dll
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\bin\Debug\Clases.pdb
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\bin\Debug\Implementacion.dll
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\bin\Debug\Implementacion.pdb
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.AssemblyReference.cache
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.Up2Date
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.dll
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.pdb
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Interop.WMPLib.dll
+C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.ResolveComReference.cache

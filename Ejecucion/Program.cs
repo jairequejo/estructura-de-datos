@@ -21,9 +21,9 @@ namespace Ejecucion
             //listaCanciones.Mostrar_Adelante();
 
             ListaEnlazadaReproduccion listaCancionesNodos = new ListaEnlazadaReproduccion();
-            listaCancionesNodos.Insertar(c1);
             listaCancionesNodos.Insertar(c2);
-            listaCancionesNodos.Mostrar_Adelante();
+            listaCancionesNodos.Insertar(c1);
+            listaCancionesNodos.Reproducir();
 
         }
     }

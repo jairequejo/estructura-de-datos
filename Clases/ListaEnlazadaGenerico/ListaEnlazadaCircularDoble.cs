@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Clases
 {
-    public class ListaDobleCircular<T>
+    public class ListaEnlazadaCircularDoble<T>
     {
         public Nodo<T> nodoPrimero { get; set; }
         public Nodo<T> nodoUltimo { get; set; }
@@ -43,24 +43,8 @@ namespace Clases
             do
             {
                 Console.WriteLine(nodoTemporal.dato);
-                ReproducirSonido(Convert.ToString(nodoTemporal.dato.GetType().GetProperty("Enlace").GetValue(nodoTemporal.dato, null)));
                 nodoTemporal = nodoTemporal.siguiente;
             } while (nodoTemporal != nodoPrimero);
-        }
-        private void ReproducirSonido(string ruta)
-        {
-            try
-            {
-                using (SoundPlayer player = new SoundPlayer(ruta))
-                {
-                    player.Load();
-                    player.PlaySync(); // Reproduce el sonido de forma síncrona
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al reproducir el sonido: " + ex.Message);
-            }
         }
         public void Mostrar_Atras()
         {
