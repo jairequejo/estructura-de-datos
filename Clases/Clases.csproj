@@ -48,6 +48,8 @@
     <Compile Include="ListaEnlazadaGenerico\ListaEnlazadaSimple.cs" />
     <Compile Include="ListaEnlazadaGenerico\Nodo.cs" />
     <Compile Include="NodoCancion.cs" />
+    <Compile Include="Pilas\NodoPila.cs" />
+    <Compile Include="Pilas\Pila.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,5 +69,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

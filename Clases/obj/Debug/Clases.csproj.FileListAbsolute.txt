@@ -45,3 +45,14 @@ C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.dll
 C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.pdb
 C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Interop.WMPLib.dll
 C:\Users\Jair\source\repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.ResolveComReference.cache
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\bin\Debug\Clases.dll
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\bin\Debug\Clases.pdb
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\bin\Debug\Implementacion.dll
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\bin\Debug\Implementacion.pdb
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.AssemblyReference.cache
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\obj\Debug\Interop.WMPLib.dll
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.ResolveComReference.cache
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\obj\Debug\Clases.csproj.Up2Date
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\obj\Debug\Clases.dll
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Clases\obj\Debug\Clases.pdb

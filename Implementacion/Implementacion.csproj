@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cancion.cs" />
+    <Compile Include="Libro.cs" />
     <Compile Include="Mascota.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

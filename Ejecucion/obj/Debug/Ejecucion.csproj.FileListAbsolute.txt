@@ -70,3 +70,16 @@ C:\Users\Jair\source\repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.csp
 C:\Users\Jair\source\repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.csproj.Up2Date
 C:\Users\Jair\source\repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.exe
 C:\Users\Jair\source\repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.pdb
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\bin\Debug\Ejecucion.exe.config
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\bin\Debug\Ejecucion.exe
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\bin\Debug\Ejecucion.pdb
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\bin\Debug\Clases.dll
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\bin\Debug\Implementacion.dll
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\bin\Debug\Clases.pdb
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\bin\Debug\Implementacion.pdb
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.csproj.AssemblyReference.cache
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.exe.config
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.csproj.CoreCompileInputs.cache
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.csproj.Up2Date
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.exe
+C:\Users\UCLAB414\Source\Repos\estructura-de-datos\Ejecucion\obj\Debug\Ejecucion.pdb
